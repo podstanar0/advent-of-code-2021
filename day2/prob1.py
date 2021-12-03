@@ -3,7 +3,7 @@ with open('input.txt', 'r') as f:
 
 commands = [(line.split()[0], int(line.split()[1])) for line in fullList]
 
-hpos, depth = 0, 0
+hpos = depth = 0
 for i, move in enumerate(commands):
     value = commands[i][1]
     if move[0] == 'forward':
