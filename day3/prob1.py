@@ -8,12 +8,12 @@ def list_to_bin(bList):
 with open('input.txt', 'r') as f:
     fullList = f.read().splitlines()
 
-bitlist = [[int(bit) for bit in line] for line in fullList]
+mainList = [[int(bit) for bit in line] for line in fullList]
 
 result = []
 ones = zeros = 0
-for i in range(len(bitlist[0])):
-    for line in bitlist:
+for i in range(len(mainList[0])):
+    for line in mainList:
         if line[i] == 1:
             ones += 1
         else: # 0

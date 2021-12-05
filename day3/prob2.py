@@ -23,12 +23,12 @@ def fetch_report(someList, ratingType, row):
 with open('input.txt', 'r') as f:
     fullList = f.read().splitlines()
 
-bitlist = [[int(bit) for bit in line] for line in fullList]
+mainList = [[int(bit) for bit in line] for line in fullList]
 
 i = 0
-oxygen = fetch_report(bitlist, 'oxygen', i)
-co2 = fetch_report(bitlist, 'co2', i)
-while i in range(len(bitlist[0])):
+oxygen = fetch_report(mainList, 'oxygen', i)
+co2 = fetch_report(mainList, 'co2', i)
+while i in range(len(mainList[0])):
     i += 1
     if len(oxygen) > 1:
         oxygen = fetch_report(oxygen, 'oxygen', i)
