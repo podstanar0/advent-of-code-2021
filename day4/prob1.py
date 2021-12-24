@@ -1,4 +1,4 @@
-def bingo(search: list, board: list) -> list:
+def play(search: list, board: list) -> list:
     for row in board:
         intr = [n for n in row if n in search]
         if len(intr) == 5:
@@ -25,7 +25,7 @@ boards = [[[int(k) for k in j.split(' ') if k != ''] for j in i] for i in txt]
 try:
     for i in range(len(nums)):
         for board in boards:
-            if len(bingo(nums[0:i], board)) == 5:
+            if len(play(nums[0:i], board)) == 5:
                 raise StopIteration
 except StopIteration:
     pass
